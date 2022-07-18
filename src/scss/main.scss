@@ -1,0 +1,66 @@
+@import url("./normalize.scss");
+@import url("./fonts.scss");
+@import url("./header.scss");
+@import url("./nav.scss");
+@import url("./mode-toggler.scss");
+@import url("./categories.scss");
+@import url("./learnMode.scss");
+@import url("./playMode.scss");
+@import url("./timer.scss");
+@import url("./statistics.scss");
+@import url("./table.scss");
+@import url("./modal.scss");
+
+$fontFamily: 'Raleway', sans-serif;
+$fontSize: 16px; 
+
+$mainColor: #000; 
+
+body {
+  width: 100vw;
+  max-width: 2550px;
+  margin: 0 auto;
+  height: 100vh;
+  font-family: $fontFamily;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $fontFamily;
+}
+
+.main__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2, p {
+  margin: 0;
+  font-weight: 400;
+}
+
+::placeholder {
+  display: block;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    height: auto;
+  }
+}

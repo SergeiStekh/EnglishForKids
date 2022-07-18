@@ -1,0 +1,114 @@
+.table__wrapper {
+  width: 100%;
+  max-width: 97%;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  overflow-y: scroll;
+}
+
+.table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow-y: scroll;
+}
+
+.table__caption {
+  text-align: left;
+  padding: 15px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+th, td {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  min-width: 100px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: initial;
+}
+
+th {
+  background: #A7DFFF;
+}
+
+tr:nth-child(even) {
+  background-color: #F8F8F8;
+}
+
+.table__header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 53px;
+}
+
+.table__header-name {
+  padding-right: 5px;
+}
+
+.table__sort__top,
+.table__sort__bottom {
+  font-size: 10px;
+  cursor: pointer;
+  transition: all .3s linear;
+  line-height: 15px;
+}
+
+.table__sort__top:hover,
+.table__sort__bottom:hover {
+  font-size: 10px;
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+@media (max-width: 800px) {
+  .table__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 50px;
+  }
+
+  .table__caption  {
+    position: absolute;
+    top: -80px;
+  }
+
+  .table__row > .table__item:first-child,
+  .table__headers > .table__header-item:first-child {
+    position: absolute;
+    width: 90px;
+    background-color: #F8F8F8;
+    -webkit-box-shadow: 12px 2px 28px -9px rgba(66, 68, 90, 1);
+-moz-box-shadow: 12px 2px 28px -9px rgba(66, 68, 90, 1);
+box-shadow: 12px 2px 28px -9px rgba(66, 68, 90, 1);
+  }
+
+  .table__row > .table__item:nth-child(2),
+  .table__headers > .table__header-item:nth-child(2) {
+    padding-left: 160px;
+  }
+
+  .table__header-item {
+    min-height: 53px;
+    max-height: 53px;
+    background: #A7DFFF;
+  }
+
+  .table__headers > .table__header-item:first-child {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 53px;
+    background: #A7DFFF;
+  }
+}

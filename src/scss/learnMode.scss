@@ -1,0 +1,172 @@
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 240px));
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  align-content: center;
+  grid-gap: 30px;
+  opacity: 1;
+  list-style: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 80px;
+}
+
+.card__item {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  transition: all .3s ease-in;
+  position: relative;
+  perspective: 1000px;
+  aspect-ratio: 1 / .89;
+  transition: all .3s linear;
+}
+
+.card__item:hover * .card__text-wrapper {
+  -webkit-box-shadow: 1px 1px 22px -11px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 1px 1px 22px -11px rgba(66, 68, 90, 1);
+  box-shadow: 1px 1px 22px -11px rgba(66, 68, 90, 1);
+}
+
+.card__front.rotated {
+  transform: rotateY(180deg);
+}
+
+.card__back.rotated {
+  transform: rotateY(360deg);
+}
+
+.card__front, .card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all .3s ease-in;
+  backface-visibility: hidden;
+}
+
+.card__front {
+  cursor: pointer;
+  position: relative;
+}
+
+.card__back {
+  transform:rotateY(180deg);
+}
+
+.card__image-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 71.4%;
+  margin-top: 16px;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  background: #FFCB45;
+}
+
+.card__text-wrapper {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  background: #FFCB45;
+  height: 80px;
+  border-radius: 0 0 15px 15px;
+  transition: all .3s ease-in;
+}
+
+.card__rotate {
+  justify-self: end;
+  padding-right: 18px;
+  width: 24px;
+  height: 24px;
+  cursor: url(../assets/images/icon_rotate.svg) 10 10, auto;
+  
+}
+
+.card__image {
+  display: block;
+  width: 88.5%;
+  height: 91.5%;
+  position: relative;
+  top: 16px;
+  border-radius: 16px 16px 0px 0px;
+  transition: all .3s ease-in;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin:  0 auto;
+  object-fit: cover;
+}
+
+.card__image-back {
+  display: block;
+  width: 88.5%;
+  height: 91.5%;
+  position: relative;
+  top: 16px;
+  border-radius: 16px 16px 0px 0px;
+  transition: all .3s ease-in;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin:  0 auto;
+}
+
+.card__title {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 16px;
+  padding-left: 24.5px;
+}
+
+.card__quantity {
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .cards__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 280px));
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+    grid-gap: 30px;
+    opacity: 1;
+    list-style: none;
+  }
+}
+
+@media (max-width: 615px) {
+  .cards__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 280px));
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+    grid-gap: 30px;
+    opacity: 1;
+    list-style: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .card__title {
+    font-size: 16px;
+  }
+
+  .card__text-wrapper {
+    height: 60px;
+  }
+
+  .card__title {
+    padding-left: 13.5px;
+  }
+}

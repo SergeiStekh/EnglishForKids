@@ -1,0 +1,72 @@
+.mode-toggler {
+  position: relative;
+  justify-self: end;
+  width: 223px;
+  height: 42px;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mode-toggler__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFCB45;
+  box-shadow: inset 2px 2px 6px #EEB00D;
+  border-radius: 30px;
+  z-index: -1;
+  transition: all .3s linear;
+}
+
+.mode-toggler__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.mode-toggler__slider {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  display: block;
+  width: 102px;
+  height: 34px;
+  border-radius: 30px;
+  background-image: url("../assets/images/mode-toggler-learn.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .3s linear;
+}
+
+.mode-toggler__mode {
+  position: absolute;
+  top: 13px;
+  left: 145px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 16px;
+  transition: all .3s linear;
+}
+
+.mode-toggler__checkbox:checked ~ .mode-toggler__slider {
+  left: 115px;
+  background-image: url("../assets/images/mode-toggler.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mode-toggler__checkbox:checked ~ .mode-toggler__mode {
+  left: 24px;
+}
+
+.mode-toggler__checkbox:checked ~ .mode-toggler__background {
+  background-color: #A7DFFF;
+  box-shadow: inset 2px 2px 6px #74CCFF;
+}
